@@ -1,0 +1,31 @@
+Question...)
+
+##Sum of Even Numbers till N..
+Given a number N, print sum of all even numbers from 1 to N.
+
+Solution...
+import java.util.*;
+public class Solution {
+
+
+	public static void main(String[] args) {
+		//Scanner is used for user input
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+        //we created sum to store the even sum
+        int sum = 0;
+        
+        int i = 0;
+        
+        while(i <= n){
+            //here we sore the sum of even
+            sum = sum +i;
+            //then we incriment the i by 2 
+            //so that we can always get even number as i is initializes with 0
+            i = i + 2;
+        }
+        //then we print sum
+        System.out.println(sum);
+	}
+
+}
