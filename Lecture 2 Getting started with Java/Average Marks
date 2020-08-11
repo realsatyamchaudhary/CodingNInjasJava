@@ -1,1 +1,36 @@
+Average Marks....
 
+QUestion...)))//Write a program to input a name(as a single character) and marks of three tests as m1, m2, and m3 of a student considering all the three marks have been given in integer format.
+//Now, you need to calculate the average of the given marks and print it along with the name as mentioned in the output format section.
+//All the test marks are in integers and hence calculate the average in integer as well. That is, you need to print the integer part of the average only and neglect the decimal part.
+
+Solution 1..)
+import java.util.*;
+public class Solution {
+
+
+	public static void main(String[] args) {
+		//we created three variable m1,m2,m3 to take input from the user to calculate the average
+	int m1 = 0;
+        int m2 = 0;
+        int m3 = 0;
+        //Scanner is used to take userInput
+        Scanner sc = new Scanner(System.in);
+        //as mentioned in the question 
+        //we need to print the name of the given input 
+        //so we take name as an input from the user
+        String name = sc.nextLine();
+        m1 = sc.nextInt();
+        m2 = sc.nextInt();
+        m3 = sc.nextInt();
+        //formula to calculate the average is = sum of objective/no. of objectibe
+        //we applied the formula of calculating average
+        int avg = (m1 + m2 + m3)/3;
+        //then we print name and avg
+        System.out.println(name);
+        System.out.println(avg);
+        
+		
+	}
+
+}
