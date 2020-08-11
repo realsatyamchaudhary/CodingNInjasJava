@@ -1,0 +1,49 @@
+Question...)
+##Number Pattern 1...
+Pattern for N = 4
+1
+23
+345
+4567
+
+
+Solution..)
+import java.util.*;
+public class Solution {
+
+
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        //we initialized i with 1 because pattern starts with 1
+        
+        int i = 1;
+        int val = 0;
+        //this runs for outer loop upto n 
+        while(i <= n) {
+            //this run for inner loop to print the element
+            //as we can notice that the row the number of elements till i
+            //when i was 1 then 1 element
+            //when i was 2 two elemnt like 2,3
+            //when i was 3 three element like 3,4,5
+            //when i was 4 four element 4,5,6,7
+            int j = 1;
+            while(j <= i) {
+                //we run this loop till ith element 
+              
+            }
+            //we print j with val bcuz there starting index is increasing with
+            //i th index and incremented
+            System.out.print(j + val);
+            //this is increment portion
+                j =  j + 1;
+            	
+		
+        }
+        //then after loop we add new line
+System.out.println();
+            i = i +1;
+            val = val + 1;
+	}
+
+}
