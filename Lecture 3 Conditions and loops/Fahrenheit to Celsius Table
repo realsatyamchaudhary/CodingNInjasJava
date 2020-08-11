@@ -1,0 +1,47 @@
+Question...)
+
+##Fahrenheit to Celsius Table...
+Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E) and Step Size (W),
+ you need to convert all Fahrenheit values from Start to End at the gap of W, into their corresponding Celsius values and print the table.
+ 
+ Solution...
+ import java.util.*;
+
+public class Solution {
+
+
+	public static void main(String[] args) {
+        //Scanner is used for user input
+		Scanner sc = new Scanner(System.in);
+        //as mentioned in the question
+        //we take 3 variable to print table
+        //start is for starting table
+        int start = sc.nextInt();
+        //end indicated the ending table
+        int end = sc.nextInt();
+        //gap make skip between number in the table
+        int gap = sc.nextInt();
+        //here f is initialized with start
+        int f = start;
+        //this loop run till end
+        while(f <= end) {
+            //here we type case the variable to int
+            //bcuz we are using floating data type and we need int as output
+            //so we type cast the variable
+            
+            int c = (int)((5.0/9) * (f - 32));
+            //this is the formula of conversion of fahrenheit into celsius
+            
+            System.out.println(f + "\t" + c);
+            //then we have some tab space as mentioned in the ques and printed
+            //fahrenhiet and celsius
+            
+            f = f + gap;
+            //and we increment the f with gap to maintain the gap
+        }
+		
+
+		
+	}
+
+}
