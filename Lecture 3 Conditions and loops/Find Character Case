@@ -1,0 +1,33 @@
+Question...)
+
+##Find Character Case..
+Write a program that takes a character as input and prints either 1, 0 or -1 according to the following rules.
+1, if the character is an uppercase alphabet (A - Z)
+0, if the character is a lowercase alphabet (a - z)
+-1, if the character is not an alphabet
+
+Solution..)
+import java.util.*;
+public class Solution {
+    
+    public static void main(String[] args) {
+        //Scanner is used for user input
+        Scanner sc = new Scanner(System.in);
+        //here a variable with char c is created to take input from the user 
+        
+        char c = sc.next().charAt(0);
+        // c is used here to check if the char is between of 'A' to 'Z'
+        if( c >= 'A' && c <= 'Z') {
+            //then it will print 1
+            System.out.println("1");
+            //if c is in the between od 'a' and 'z'
+            
+        }else if(c >= 'a' && c <= 'z') {
+            //then it will print 0
+            System.out.println("0");
+        }else {
+            //if c is not an alphabet it will print -1;
+            System.out.println("-1");
+        }
+    }
+}
