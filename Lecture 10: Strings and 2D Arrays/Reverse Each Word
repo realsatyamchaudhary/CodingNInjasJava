@@ -1,0 +1,63 @@
+Question...)
+##Reverse Each Word...
+Given a string S, reverse each word of a string individually. For eg. if a string is "abc def", reversed string should be "cba fed".
+
+Solution...)
+
+public class Solution {
+
+	// Return the reversed string. No need to print
+	public static String reverseEachWord(String input) {
+		
+        //we need to add space in the end of input 
+        //because we identify the string with " "/space;
+        
+        input +=" ";
+        String toprint = "";
+        int index = 0;	
+        	for(int i = 0; i < input.length(); i++) {
+                
+                // to use this condition we add space in the last of string(input.)
+                if(input.charAt(i) == ' ') {
+                    for(int j = i; j >= index; j--) {
+                        toprint += input.charAt(j);
+                    }
+                    index = i+1;
+                }
+            }
+        return toprint.substring(1);
+
+	}
+}
+
+
+
+Solution..)
+
+
+
+public class Solution {
+
+    // Return the reversed string. No need to print
+    public static String reverseEachWord(String str) {
+
+        String x="";
+        int spaceIndex=0;
+        for(int i=0;i<=str.length();i++) {
+            if(i==str.length() ||  str.charAt(i)==' ' ) {
+                x=x+reverse(str.substring(spaceIndex,i))+" ";
+                spaceIndex=i+1;
+            }
+        }
+        return x;
+
+    }
+    private static String reverse(String str) {
+        String x="";
+        for(int i=str.length()-1;i>=0;i--)
+            x=x+str.charAt(i);
+        return x;
+    }
+
+
+}
