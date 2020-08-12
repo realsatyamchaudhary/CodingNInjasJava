@@ -1,0 +1,48 @@
+Question...)
+##Largest Row or Column...
+For a given two-dimensional integer array/list of size (N x M),
+you need to find out which row or column has the largest sum(sum of all the elements in a row/column) amongst all the rows and columns.
+
+Solution....)
+
+
+public class Solution {
+
+	public static void findLargest(int mat[][]){
+		int lr = Integer.MIN_VALUE;
+        int lc = Integer.MIN_VALUE;
+        int k = 0;
+        int n = 0;
+        if(mat.length == 0) {
+            System.out.print("row 0 "+ lr);
+            return;
+        }
+        for(int i = 0; i < mat.length; i++) {
+            int sum1 = 0;
+            for(int j = 0; j < mat[0].length; j++) {
+                sum1 += mat[i][j];
+                
+            }
+            if(sum1 > lr) {
+                lr = sum1;
+                k = i;
+            }
+        }
+        for(int i = 0; i < mat[0].length; i++) {
+            int sum2 = 0;
+            for(int j = 0; j < mat.length; j++) {
+                sum2 += mat[j][i];
+            }
+            if(sum2 > lc) {
+                lc = sum2;
+                n = i;
+            }
+        }
+        if(lr >= lc) {
+            System.out.print("row "+ k +" "+ lr);
+        }else {
+            System.out.print("column "+ n+" "+lc);
+        }
+	}
+
+}
