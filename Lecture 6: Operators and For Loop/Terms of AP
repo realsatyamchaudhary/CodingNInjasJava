@@ -1,0 +1,26 @@
+Question...)
+##Terms of AP..
+Write a program to print first x terms of the series 3N + 2 which are not multiples of 4.
+
+Solution..)
+
+import java.util.*;
+public class Main {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int i = 1;
+        int curr = 1;
+        
+        while(i <= n) {
+            int num = 3 * curr + 2;
+            if(num % 4 != 0) {
+                System.out.print(num + " ");
+                 i++;
+            }
+           curr++;
+        }
+				
+	}
+}
