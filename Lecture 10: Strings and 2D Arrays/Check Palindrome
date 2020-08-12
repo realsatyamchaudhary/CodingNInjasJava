@@ -1,0 +1,27 @@
+Question...)
+##Check Palindrome..
+Given a String s, check it its palindrome. Return true if string is palindrome, else return false.
+Palindrome strings are those, where string s and its reverse is exactly same.
+
+Solution...)
+
+public class Solution {
+
+	public static boolean checkPalindrome(String str){
+		char[] ch = str.toCharArray();
+        int i = 0;
+        int j = str.length()-1;
+        int n = str.length();
+        
+        while(i < n/2 && j > n/2+1) {
+            if(ch[i] != ch[j]) {
+                return false;
+            }else {
+                i++;
+                j--;
+            }
+            
+        }
+        return true;
+	}
+}
