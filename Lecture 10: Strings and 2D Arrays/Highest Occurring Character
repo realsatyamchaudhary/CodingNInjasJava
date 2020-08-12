@@ -1,0 +1,75 @@
+Question....)
+##Highest Occurring Character..
+Given a string, S, find and return the highest occurring character present in the given string.
+If there are 2 characters in the input string with same frequency, return the character which comes first.
+
+
+Note : Assume all the characters in the given string are lowercase.
+
+
+Solution....)
+
+// highest occurring character in the String.
+public class solution {
+
+	public static char highestOccuringCharacter(String inputString) {
+		int freq[] = new int[257];
+        int n = inputString.length();
+        for(int i = 0; i < n; i++) {
+            //here in this line we typecast the string to int then store the 
+            //ascii value of string into the array freq
+            //that is if 'a' = 97"in ascii vale" then the position of a will increment with 1
+            
+            freq[(int)(inputString.charAt(i))]+=1;
+            
+        }
+        //then here we create a variable to store maximum occuring character
+        
+        int max = Integer.MIN_VALUE;
+        //we created this result variable to store the char which is occured highest no. of times
+        
+        char result = ' ';
+        for(int i = 0; i < n; i++) {
+            //then we check where the charAt(i) is greather than max 
+            if(max < freq[inputString.charAt(i)]) {
+                //if yes then me store index of maximun occuring charin "max" variable
+                max = freq[inputString.charAt(i)];
+                //and update the result to maximum occuring char which index is stored in max
+                result = inputString.charAt(i);
+            }
+        }
+        //yup then we are sll done we return out result
+		return result;
+	}
+}
+
+
+
+Solution2...)
+
+// highest occurring character in the String.
+public class solution {
+
+	public static char highestOccuringCharacter(String inputString) {
+		int c1 = 0,c2 = 0,i,j;
+		char maxChar = '\0';
+		j = 0;
+		while(j < inputString.length()) {
+		i = 0;
+		do {
+			if(inputString.charAt(i) == inputString.charAt(j)) {
+				c2++;
+			}
+			i++;
+		}while(i < inputString.length());
+		if(c2 > c1) {
+			maxChar = inputString.charAt(j) ;
+			c1 = c2;
+		}
+		c2 = 0;
+		j++;
+	}
+		return maxChar;
+
+	}
+}
