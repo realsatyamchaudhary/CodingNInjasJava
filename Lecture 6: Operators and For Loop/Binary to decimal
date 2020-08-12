@@ -1,0 +1,26 @@
+Question...)
+##Binary to decimal...
+Given a binary number as an integer N, convert it into decimal and print.
+
+Solution...)
+
+import java.util.*;
+public class Main {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int ans = 0;
+        int placevalue = 1;
+        int remainder = 0;
+        
+        while(n > 0) {
+            remainder = n % 2;
+            ans = ans + placevalue * remainder;
+        	placevalue *= 2;
+            n = n/10;
+        }
+        System.out.println(ans);
+	}
+}
