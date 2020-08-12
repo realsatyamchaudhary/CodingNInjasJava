@@ -1,0 +1,49 @@
+Quewstion...)
+##Remove character...
+Given a string and a character x. Write a function to remove all occurrences of x character from the given string.
+Leave the string as it is, if the given character is not present in the string.
+
+
+Solution..)
+
+public class solution {
+
+	public static String removeAllOccurrencesOfChar(String input, char c) {
+	    String toprint = "";
+        for(int i = 0; i < input.length(); i++) {
+            if(input.charAt(i) == c) {
+               //here continue skip the character which encounter on ith index
+                //then the remaining iterated char will be store in the toprint
+                //variable 
+                
+                continue;
+                
+            }
+            toprint += input.charAt(i);
+        }
+        return toprint;
+
+	}
+
+}
+
+
+
+solution 2....)
+
+
+public class solution {
+
+	public static String removeAllOccurrencesOfChar(String input, char c) {
+		String result = "";
+		for(int i= 0;i < input.length();i++) {
+			if(input.charAt(i) == c)
+				continue;
+			result += input.charAt(i);
+		}
+		return result;
+
+	}
+
+}
+
