@@ -1,0 +1,38 @@
+Question...)
+##Code : Inverted Number Pattern...
+Print the following pattern for the given N number of rows.
+Pattern for N = 4
+4444
+333
+22
+1
+
+Solution...)
+
+import java.util.*;
+public class Solution {
+
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int val = n;
+        
+        int i = 0;
+        while(i <= n) {
+            int j = 1;
+            while(j <= n-i) {
+                System.out.print(val);
+                j++;
+            }
+            val = val - 1;
+            System.out.println();
+            i++;
+        }
+
+		
+	}
+
+}
